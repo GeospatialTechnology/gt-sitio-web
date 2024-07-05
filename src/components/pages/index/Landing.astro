@@ -1,0 +1,25 @@
+---
+import Title from '../../common/Title.astro'
+import Text from '../../common/Text.astro'
+import Button from '../../common/Button.astro'
+import LandingSVG from '../../../assets/vector/LandingSVG.astro'
+---
+
+<section
+	class="w-screen h-screen bg-gradient-to-b from-bg-100 to-bg-200 flex items-center justify-center relative isolate overflow-hidden"
+>
+	<div class="flex flex-col w-[880px] gap-8 items-center">
+		<Title>
+			Lorem ipsum is placeholder <br />
+			<span>Commonly</span>
+		</Title>
+		<Text>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est hic veniam laborum neque error
+			quibusdam praesentium aut cum molestiae! Sunt.
+		</Text>
+		<div class="mt-8"><Button>Saber más</Button></div>
+	</div>
+	<div class="w-4/5 aspect-square absolute top-[85%] -translate-y-[35%] text-primary-200/50 -z-10 animate-[bounce_10s_infinite]">
+		<LandingSVG />
+	</div>
+</section>
