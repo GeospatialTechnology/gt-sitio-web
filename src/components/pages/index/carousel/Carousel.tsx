@@ -62,9 +62,9 @@ const CarouselReact = (props: any) => {
 
 	return (
 		<>
-			<ul className="w-full flex relative h-80 items-center overflow-hidden isolate">
-				<div className="absolute bg-gradient-to-r from-transparent to-bg right-0 h-full w-1/3 z-10"></div>
-				<div className="absolute bg-gradient-to-l from-transparent to-bg left-0 h-full w-1/3 z-10"></div>
+			<ul className="w-full flex relative h-96 items-center overflow-hidden isolate">
+				<div className="absolute bg-gradient-to-r from-transparent to-bg right-0 h-full w-1/3 z-10 pointer-events-none"></div>
+				<div className="absolute bg-gradient-to-l from-transparent to-bg left-0 h-full w-1/3 z-10 pointer-events-none"></div>
 				{items.map((item, index) => (
 					<motion.li
 						key={index}
@@ -75,15 +75,19 @@ const CarouselReact = (props: any) => {
 							opacity: 1,
 							x: calcPosition(index).pos
 						}}
+						whileHover={{
+							scale: 1.1,
+							color: '#66CC66'
+						}}
 						transition={{
 							type: 'spring',
-							duration: 3
+							stiffness: 120
 						}}
 						style={calcPosition(index).styles}
-						className="flex flex-col items-center gap-6 absolute"
+						className="flex flex-col items-center gap-6 absolute text-neutral-500"
 					>
-						<div className="w-full aspect-square text-neutral-500">{props[item.title]}</div>
-						<b>{item.title}</b>
+						<div className="w-full aspect-square">{props[item.title]}</div>
+						<b className="text-black">{item.title}</b>
 						<p className="text-center text-sm text-black/60 font-semibold">{item.description}</p>
 					</motion.li>
 				))}

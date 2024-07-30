@@ -5,5 +5,7 @@ export enum ICON {
 	DOTNET = 'dotnet',
 	TAILWIND = 'tailwind',
 	TYPESCRIPT = 'typescript',
-	ASTRO = 'astro'
+	ASTRO = 'astro',
+	INSTAGRAM = 'instagram',
+	LINKEDIN = 'linkedin'
 }

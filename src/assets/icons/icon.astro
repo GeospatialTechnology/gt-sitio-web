@@ -3,10 +3,12 @@ import { ICON } from './icon'
 import IconAngular from './iconAngular.astro'
 import IconAstro from './iconAstro.astro'
 import IconDatabase from './iconDatabase.astro'
+import IconInstagram from './iconInstagram.astro'
 import IconNet from './iconNet.astro'
 import IconReact from './iconReact.astro'
 import IconTailwind from './iconTailwind.astro'
 import IconTypescript from './iconTypescript.astro'
+import IconLinkedIn from './iconLinkedIn.astro'
 
 interface Props {
 	type: ICON
@@ -23,6 +25,8 @@ const { type } = Astro.props
 		[ICON.TAILWIND]: <IconTailwind />,
 		[ICON.DATABASE]: <IconDatabase />,
 		[ICON.DOTNET]: <IconNet />,
-		[ICON.ASTRO]: <IconAstro />
+		[ICON.ASTRO]: <IconAstro />,
+		[ICON.INSTAGRAM]: <IconInstagram />,
+		[ICON.LINKEDIN]: <IconLinkedIn />
 	}[type]
 }

@@ -1,0 +1,91 @@
+---
+import { ICON } from '@/assets/icons/icon'
+import Icon from '@/assets/icons/icon.astro'
+import Logo from '@/layout/navbar/Logo.astro'
+---
+
+<footer class="py-20 flex flex-col px-page-base">
+	<section class="flex flex-wrap gap-8 border-b border-gray-300 pb-8">
+		<div class="flex-1 flex flex-col gap-4 min-w-52">
+			<strong>Productos</strong>
+			<ul class="flex flex-col gap-2">
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Core</a
+					>
+				</li>
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Avalúos</a
+					>
+				</li>
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Geoportal</a
+					>
+				</li>
+			</ul>
+		</div>
+		<div class="flex-1 flex flex-col gap-4 min-w-52">
+			<strong>Servicios</strong>
+			<ul class="flex flex-col gap-2">
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Páginas web</a
+					>
+				</li>
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Despliegues</a
+					>
+				</li>
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Aplicaciones</a
+					>
+				</li>
+				<li>
+					<a
+						class="text-sm font-medium text-black/60 hover:underline hover:text-black transition-all duration-300"
+						href="#">Soporte</a
+					>
+				</li>
+			</ul>
+		</div>
+		<div class="flex-1 flex flex-col gap-4 min-w-52">
+			<strong>Legales</strong>
+			<p class="text-sm font-medium text-black/60 text-justify">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, provident. Adipisci nihil
+				deserunt magni et eius officiis distinctio minus amet.
+			</p>
+		</div>
+	</section>
+	<section class="pt-8 flex justify-between items-center">
+		<Logo dark />
+		<ul class="flex items-center gap-4">
+			<li>
+				<a
+					class="block w-12 aspect-square text-black/80 hover:text-primary-500 transition-all duration-300"
+					href="#"
+				>
+					<Icon type={ICON.INSTAGRAM} />
+				</a>
+			</li>
+			<li>
+				<a
+					class="block w-12 aspect-square text-black/80 hover:text-primary-500 transition-all duration-300"
+					href="#"
+				>
+					<Icon type={ICON.LINKEDIN} />
+				</a>
+			</li>
+		</ul>
+	</section>
+  <small class="self-center">© Geotec S.R.L. Todos los derechos reservados</small>
+</footer>

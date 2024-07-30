@@ -1,8 +1,8 @@
 ---
 import Title from '@/components/common/Title.astro'
 import Text from '@/components/common/Text.astro'
-import Button from '@/components/common/Button.astro'
 import LandingSVG from '@/assets/vector/LandingSVG.tsx'
+import Button from './Button'
 ---
 
 <section
@@ -17,7 +17,7 @@ import LandingSVG from '@/assets/vector/LandingSVG.tsx'
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est hic veniam laborum neque error
 			quibusdam praesentium aut cum molestiae! Sunt.
 		</Text>
-		<div class="mt-8"><Button>Saber más</Button></div>
+		<div class="mt-8"><Button client:load text="Saber más" /></div>
 	</div>
 	<!-- animate-[bounce_10s_infinite] -->
 	<div

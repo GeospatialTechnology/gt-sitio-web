@@ -1,0 +1,47 @@
+---
+import Title from '@/components/common/Title.astro'
+import Text from '@/components/common/Text.astro'
+import LandingSVG from '@/assets/vector/LandingSVG.tsx'
+import Button from '../landing/Button'
+---
+
+<section
+	class="w-screen h-screen bg-gradient-to-b from-bg-200 to-bg-100 flex items-center justify-center relative isolate overflow-hidden pt-28 px-page-base"
+>
+	<div class="flex gap-20 flex-wrap">
+		<div class="flex-1 flex flex-col gap-8">
+			<Title>
+				¿Tienes dudas? <br />
+				<span>Contáctanos</span>
+			</Title>
+			<Text>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est hic veniam laborum neque error
+				quibusdam praesentium aut cum molestiae! Sunt.
+			</Text>
+		</div>
+		<form class="flex-1 flex flex-col gap-8 min-w-80">
+			<input
+				type="text"
+				class="w-full font-bold bg-white/60 rounded-md outline-none p-2 ring-0 focus:ring-2 ring-inset ring-bg-200 transition-all duration-500 border-white border placeholder:text-bg-200/40 text-bg-200"
+				placeholder="Nombre(s) completo(s)"
+			/>
+			<input
+				type="text"
+				class="w-full font-bold bg-white/60 rounded-md outline-none p-2 ring-0 focus:ring-2 ring-inset ring-bg-200 transition-all duration-500 border-white border placeholder:text-bg-200/40 text-bg-200"
+				placeholder="Correo electrónico"
+			/>
+			<textarea
+				class="w-full h-40 font-bold bg-white/60 resize-none rounded-md outline-none p-2 ring-0 focus:ring-2 ring-inset ring-bg-200 transition-all duration-500 border-white border placeholder:text-bg-200/40 text-bg-200"
+				placeholder="Consulta"></textarea>
+			<div class="self-center">
+				<Button client:load text="Enviar" />
+			</div>
+		</form>
+	</div>
+	<!-- animate-[bounce_10s_infinite] -->
+	<div
+		class="w-4/5 aspect-square absolute bottom-[45%] text-primary-200/80 opacity-40 -z-10 animate-[bounce_10s_infinite]"
+	>
+		<LandingSVG client:load />
+	</div>
+</section>

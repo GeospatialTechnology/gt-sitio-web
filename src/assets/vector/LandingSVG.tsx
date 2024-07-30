@@ -4,12 +4,10 @@ const icon = {
 	hidden: {
 		opacity: 0,
 		pathLength: 0,
-		fill: 'rgba(255, 255, 255, 0)'
 	},
 	visible: {
 		opacity: 1,
 		pathLength: 1,
-		fill: 'rgba(255, 255, 255, 1)'
 	}
 }
 
@@ -21,7 +19,7 @@ const LandingSVG = () => {
 			viewBox="0 0 1217 1046"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			stroke="rgba(255, 255, 255, 0.4)"
+			stroke="rgba(255, 255, 255, 0.2)"
 			strokeWidth="2"
 			strokeLinecap="round"
 			strokeLinejoin="round"

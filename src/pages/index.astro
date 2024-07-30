@@ -1,8 +1,10 @@
 ---
 import Page from '@/layout/Page.astro'
-import Landing from '@/components/pages/index/Landing.astro'
+import Landing from '@/components/pages/index/landing/Landing.astro'
 import Description from '@/components/pages/index/Description.astro'
 import Carousel from '@/components/pages/index/carousel/Carousel.astro'
+import Contact from '@/components/pages/index/contact/Contact.astro'
+import Footer from '@/components/pages/index/footer/Footer.astro'
 ---
 
 <Page>
@@ -12,4 +14,6 @@ import Carousel from '@/components/pages/index/carousel/Carousel.astro'
 		<span class="block border-b border-gray-400"></span>
 	</div>
 	<Carousel />
+	<Contact />
+	<Footer />
 </Page>
