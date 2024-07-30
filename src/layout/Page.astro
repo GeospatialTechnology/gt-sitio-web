@@ -14,7 +14,7 @@ import Navbar from './Navbar.astro'
 		/>
 		<title>Geotec S.R.L.</title>
 	</head>
-	<body>
+	<body class="bg-bg">
 		<Navbar />
 		<slot />
 	</body>
@@ -33,5 +33,16 @@ import Navbar from './Navbar.astro'
 	}
 	image {
 		font-size: 0;
+	}
+	.text-shadow {
+		text-shadow:
+			2px 0 #000,
+			-2px 0 #000,
+			0 2px #000,
+			0 -2px #000,
+			1px 1px #000,
+			-1px -1px #000,
+			1px -1px #000,
+			-1px 1px #000;
 	}
 </style>
