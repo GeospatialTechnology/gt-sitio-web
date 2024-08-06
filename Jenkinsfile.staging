@@ -1,0 +1,60 @@
+pipeline {
+    agent any  
+    // Definir variables globales para dateTag e imageName
+    environment {
+        dateTag = sh(script: 'TZ=\'America/La_Paz\' date +\'%y-%m-%d_%H-%M\'', returnStdout: true).trim()
+        imageName = 'geotecsrl/gt-sitio-web-staging'
+    }
+
+
+    stages {
+        stage('Clonar Repositorio') {
+            steps {
+                script {
+                    checkout([$class: 'GitSCM', branches: [[name: 'origin/staging']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', credentialsId: 'jenkins-github']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://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@github.com/GeospatialTechnology/gt-gt-sitio-web-staging.git']]])
+                }
+            }
+        }
+
+        stage('Crear Carpeta en el Host') {
+            steps {
+                script {
+                    sh 'sudo mkdir -p /home/ubuntu-host/dockers/gt-sitio-web-staging'
+                    sh 'sudo chmod -R 777 /home/ubuntu-host/dockers/gt-sitio-web-staging'
+                }
+            }
+        }
+
+        stage('Copiar a /home/ubuntu-host/gt-gt-sitio-web-staging en el host') {
+            steps {
+                script {
+                    sh 'sudo cp -r * /home/ubuntu-host/dockers/gt-sitio-web-staging'
+                    sh 'sudo chmod +x /home/ubuntu-host/dockers/gt-sitio-web-staging/deploy.sh'
+                   // sh 'cp -f /home/ubuntu/dockers/gt-sitio-web-staging/src/app/Configuracion/config-prod.ts /home/ubuntu/dockers/arqueos/src/app/Configuracion/config.ts'
+                }
+            }
+        }
+        
+       stage('Desplegar con Docker Compose') {
+            steps {
+                script {
+                    dir('/home/ubuntu-host/dockers/gt-sitio-web-staging') {
+                    
+                        // Ejecutar docker-compose up
+                        sh 'sudo /home/ubuntu-host/dockers/gt-sitio-web-staging/deploy.sh'
+                    }
+                }
+            }
+        }
+
+        stage('Limpiar Carpeta de Docker y Temporales...') {
+            steps {
+                script {
+                    sh 'sudo rm -rf /home/ubuntu-host/dockers/gt-sitio-web-staging/*'
+                    sh 'sudo rm -rf /home/ubuntu-host/dockers/gt-sitio-web-staging@tmp'
+                }
+            }
+        }
+
+    }
+}
