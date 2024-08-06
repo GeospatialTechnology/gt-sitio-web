@@ -11,7 +11,7 @@ pipeline {
         stage('Clonar Repositorio') {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: 'origin/staging']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', credentialsId: 'jenkins-github']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://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@github.com/GeospatialTechnology/gt-sitio-web-staging.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: 'origin/staging']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', credentialsId: 'jenkins-github']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://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@github.com/GeospatialTechnology/gt-sitio-web.git']]])
                 }
             }
         }
