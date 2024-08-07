@@ -19,7 +19,7 @@ const LandingSVG = () => {
 			viewBox="0 0 1217 1046"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			stroke="rgba(255, 255, 255, 0.2)"
+			stroke="rgba(255, 255, 255, 0.4)"
 			strokeWidth="2"
 			strokeLinecap="round"
 			strokeLinejoin="round"
@@ -34,7 +34,7 @@ const LandingSVG = () => {
 				initial="hidden"
 				animate="visible"
 				transition={{
-					default: { duration: 2, ease: 'easeInOut' },
+					default: { duration:4, ease: 'easeInOut' },
 					fill: { duration: 2, ease: [1, 0, 0.8, 1] }
 				}}
 			></motion.path>

@@ -11,11 +11,11 @@ export const items = [
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam odio.',
 		src: ICON.REACT
 	},
-	{
+	/* {
 		title: 'Angular',
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam odio.',
 		src: ICON.ANGULAR
-	},
+	}, */
 	{
 		title: 'Astro',
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam odio.',
@@ -35,5 +35,10 @@ export const items = [
 		title: 'PostgreSQL',
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam odio.',
 		src: ICON.DATABASE
+	},
+	{
+		title: 'ArcGIS',
+		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam odio.',
+		src: ICON.ARCGIS
 	}
 ]

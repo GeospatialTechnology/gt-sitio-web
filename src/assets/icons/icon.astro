@@ -9,6 +9,7 @@ import IconReact from './iconReact.astro'
 import IconTailwind from './iconTailwind.astro'
 import IconTypescript from './iconTypescript.astro'
 import IconLinkedIn from './iconLinkedIn.astro'
+import IconGlobe from './iconGlobe.astro'
 
 interface Props {
 	type: ICON
@@ -27,6 +28,7 @@ const { type } = Astro.props
 		[ICON.DOTNET]: <IconNet />,
 		[ICON.ASTRO]: <IconAstro />,
 		[ICON.INSTAGRAM]: <IconInstagram />,
-		[ICON.LINKEDIN]: <IconLinkedIn />
+		[ICON.LINKEDIN]: <IconLinkedIn />,
+		[ICON.ARCGIS]: <IconGlobe />
 	}[type]
 }
