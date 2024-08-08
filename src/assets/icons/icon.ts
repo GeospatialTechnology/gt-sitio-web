@@ -7,5 +7,6 @@ export enum ICON {
 	TYPESCRIPT = 'typescript',
 	ASTRO = 'astro',
 	INSTAGRAM = 'instagram',
-	LINKEDIN = 'linkedin'
+	LINKEDIN = 'linkedin',
+	ARCGIS = 'arcgis'
 }

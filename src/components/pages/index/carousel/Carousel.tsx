@@ -1,6 +1,7 @@
 import { items } from '@/components/pages/index/carousel/carouselItems'
 import { useEffect, useState, type CSSProperties } from 'react'
 import { motion } from 'framer-motion'
+import { tailwindColors } from '@/utils/tailwindConfig'
 
 const CarouselReact = (props: any) => {
 	const [carouselIndex, setCarouselIndex] = useState(0)
@@ -77,7 +78,13 @@ const CarouselReact = (props: any) => {
 						}}
 						whileHover={{
 							scale: 1.1,
-							color: '#66CC66'
+							//@ts-ignore
+							color: tailwindColors.primary['400']
+						}}
+						whileTap={{
+							scale: 1.1,
+							//@ts-ignore
+							color: tailwindColors.primary['400']
 						}}
 						transition={{
 							type: 'spring',
