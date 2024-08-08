@@ -12,7 +12,11 @@ const { dark } = Astro.props
 ---
 
 <div class="flex h-16 gap-4 items-center">
-	<Image class="h-full w-auto" src={dark ? GeotecLogoBlack : GeotecLogo} alt="geotec-logo" />
+	<img
+		class="h-full w-auto"
+		src={dark ? '/assets/GeotecLogoBlack.png' : '/assets/GeotecLogo.png'}
+		alt="geotec-logo"
+	/>
 	<div class="flex flex-col items-center">
 		<h1 class={twMerge('font-bold text-4xl', dark ? 'text-black' : 'text-white')}>GEOTEC</h1>
 		<p class={twMerge('text-[10px] font-medium', dark ? 'text-black' : 'text-white')}>
